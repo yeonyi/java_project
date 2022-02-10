@@ -7,7 +7,7 @@ package day0119;
 public class UseMath {
 	public UseMath() {
 		//객체를 생성하지 않고 사용하는 클래스
-//		Math m = new Math(); 생성자가 보이지 않으므로 객체화를 할 수 없다.
+//		Math m = new Math(); //생성자가 보이지 않으므로 객체화를 할 수 없다.
 		int i = -19;
 		System.out.println(i+"의 절대값 "+Math.abs(i));
 		

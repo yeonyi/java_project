@@ -11,6 +11,7 @@ public class UseStaticVariable {
 	int insI;//instance variable
 
 	public static void main(String[] args) {
+		
 		System.out.println(i);
 		System.out.println(UseStaticVariable.j);
 		//static변수는 객체에 속해있지 않은 공용변수로 객체명.변수명으로 사용하면 사용은 되나 올바른 사용방법이 아니므로 경고메세지를 보여준다.

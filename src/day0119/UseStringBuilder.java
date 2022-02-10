@@ -19,7 +19,7 @@ public class UseStringBuilder {
 		StringBuffer sb2 = new StringBuffer();
 		sb2.append("오늘은 수요일 입니다.");//붙임
 		sb2.insert(4, "2022년 1월 19일 ");//삽입
-		sb2.delete(4, 10);
+//		sb2.delete(4, 10);
 		
 		System.out.println(sb2);
 	}//useStringBuffer

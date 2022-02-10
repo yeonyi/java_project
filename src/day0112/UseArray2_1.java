@@ -21,7 +21,7 @@ public class UseArray2_1 {
 				System.out.printf("%d\t", score[i][j]);
 				totalScore += score[i][j];//한 학생의 점수를 누적합
 			}//end for
-			System.out.printf("%d\t%.2f\n", totalScore, (double)totalScoreAll/(score.length*score[0].length));
+			System.out.printf("%d\t%.2f\n", totalScore, (double)totalScore/3);
 			totalScoreAll += totalScore;
 			totalAverage += totalScore/score[i].length;
 			totalScore = 0;//다음학생의 점수를 위해서 초기화
@@ -30,7 +30,7 @@ public class UseArray2_1 {
 		System.out.println("------------------------------------------------------");
 		System.out.printf("응시인원 [%d]명\n", score.length);
 		//숙제. 코드 직접 기술해서 처리
-		System.out.printf("전체 총점 [%d]점, 전체 평균 [%.2f]\n",totalScoreAll, (double)totalScore/score[0].length );
+		System.out.printf("전체 총점 [%d]점, 전체 평균 [%.2f]\n",totalScoreAll, (double)totalAverage/names.length );
 		//숙제. 아래의 작업을 instance variable과 method를 작성하여 처리결과를 출력
 		//System.out.printf("자바 총점 [%d], 오라클 총점 [%d], HTML 총점[%d]\n", JavaTotal, OracleTotal, HtmlTotal);
 		//System.out.printf("자바 최고점수 [%d]점\n", 0);
@@ -72,16 +72,21 @@ public class UseArray2_1 {
 	
 	public void FirstGrade() {
 		int FirstGrade = 0;
-		int i = 1;
-		int totalAverage = totalScore/score[i].length;
-		for(i= 0 ; i<names.length; i++) {
-			if(totalAverage>FirstGrade) {
-				FirstGrade = totalAverage;
-			}//end if
+		int i,j = 1;
+		
+		for (i=0;i<score.length;i++) {//행
+			for(j=0;j<score[i].length;j++) {//열
+				totalScore += score[i][j];//한 학생의 점수를 누적합
+					if(totalScore>FirstGrade) {
+						FirstGrade = totalScore;
+					}//end if
+			}//end for
+			totalScore = 0;
 		}//end for
+		System.out.println("최고점수 총 함 : "+ FirstGrade);
 		//i는 계속증가하기 때문에 names[i]번째 배열방은 존재하지 않아요. 그래서 에러가 난거에요.
-		System.out.println(" i is ----"+i);//names[5]방은존재하지 않습니다. 최고번호는 얻는 방법을 고민해보세요.
-		System.out.printf("1등학생의 번호[%d], 이름[%s]\n", i+1, names[i]);
+		System.out.println(" i is ----"+i);//names[5]방은존재하지 않습니다. 최고번호는 얻는 방법을 고민해보세요.//3번 김정하 출력
+		System.out.printf("1등학생의 번호[%d], 이름[%s]\n", i, names[i-1]);
 	}//FirstGrade
 
 	public static void main(String[] args) {

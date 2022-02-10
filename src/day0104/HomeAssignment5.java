@@ -22,20 +22,22 @@ public class HomeAssignment5 {
 		}//end for
 		
 		// 3번문제
+		//입력되는 값이 2~9단 사이일 때에 입력되는 값으로 구구단을 출력하세요.
+		//2~9단 아니라면 “구구단은 2~9까지만 가능 합니다.” 를 출력
+
 		System.out.println();
-		int i=0;
-		i=Integer.parseInt(args[0]);
+		int num =Integer.parseInt(args[0]);
 		
-			if(i>1 && i<82){
-				int j=0;
-				for (int a = 2; a < 10; a++) {
-					for (int b = 1; b < 10; b++) {
-						j=a*b;
-						if(i%j==0) {
-						}//end if
-					}//end for
+			if(num>1 && num<82){
+				int i=0;
+				for (int a = 2; a < 10; a++) {//a는 2~9까지
+					for (int b = 1; b < 10; b++) {//b는 1~9까지
+						i=a*b;//i=2*1, 2*2, 2*3... 
+						}//end for
+					if(num%i==0) {
+					}//end if
 				}//end for
-				System.out.println(i+"는"+i/9+"단이다.");
+				System.out.println(num+"는"+num/i+"단이다.");
 					
 			}else {
 				System.out.println("구구단은 2-9단까지만 가능합니다.");

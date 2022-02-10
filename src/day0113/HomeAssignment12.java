@@ -14,9 +14,9 @@ public class HomeAssignment12 {
 
 	private int htmlScore;
 
-	private int totalScore = javaScore + oracleScore+ htmlScore;
+	private int totalScore;
 	
-	private int totalAverage = totalScore/3 ;
+	private int totalAverage;
 
 	
 

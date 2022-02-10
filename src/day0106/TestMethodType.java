@@ -30,7 +30,7 @@ public class TestMethodType {
 	public int typeC() {
 		int i = 2022;
 		return i; 
-	}
+	}//typeC
 	
 	/**
 	 * 가변값(반환형 있고, 매개변수 있는 형)형태의 method<br>

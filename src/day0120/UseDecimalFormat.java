@@ -16,21 +16,21 @@ public class UseDecimalFormat {
 		System.out.println(i);
 		
 		DecimalFormat df = new DecimalFormat("##,###,###");
-		System.out.println(df.format(i));
+		System.out.println(df.format(i));//1,500,000
 		
 		DecimalFormat df2 = new DecimalFormat("00,000,000");
-		System.out.println(df2.format(i));
+		System.out.println(df2.format(i));//01,500,000
 		
 		double d = 2022.0120;
 		DecimalFormat df3 = new DecimalFormat("##,###,###.##");//소수점이하 2자리까지 출력
-		System.out.println(df3.format(d));
+		System.out.println(df3.format(d));//2,022.01
 
 		DecimalFormat df4 = new DecimalFormat("00,000,000.00");
-		System.out.println(df4.format(d));
+		System.out.println(df4.format(d));//00,002,200.01
 		
 		i = 11111111;
 		DecimalFormat df5 = new DecimalFormat("#,###");
-		System.out.println(df5.format(i));
+		System.out.println(df5.format(i));//11,111,111
 	}//UseDecimalFormat
 
 	public static void main(String[] args) {

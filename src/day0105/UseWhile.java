@@ -10,8 +10,8 @@ public class UseWhile {
 
 	public static void main(String[] args) {
 		// 1~100까지 출력
-		int i = 10;//초기값
-		while (i < 10) {//조건식
+		int i = 1;//초기값
+		while (i < 101) {//조건식
 			System.out.print(i + " ");//반복수행문장
 			i++;// 증감식(작성하지 않으면 무한루프에 빠짐)
 		} //end while

@@ -39,7 +39,7 @@ public class HomeAssignment9 {
 		
 		String m = "우쩔!!";
 		//ha.msg(m);
-		System.out.println("자신이 생각하는 신조어를 말하세요: "+ s);
+		System.out.println("자신이 생각하는 신조어를 말하세요: "+ m);
 		System.out.println("세대 검사: "+ha.msg(m));
 		
 	}

@@ -21,15 +21,12 @@ public class UseHomeAssignment12 {
 
 		System.out.println("---------------------------");
 
-		HomeAssignment12 temp = null;
-		temp = student[0];
+		for (HomeAssignment12 value : student) {
+			value.setTotalScore(value.getJavaScore() + value.getOracleScore()+ value.getHtmlScore());
+			value.setTotalAverage(value.getTotalScore()/3);
 
-		for (int i = 1; i < student.length - 2; i++) {
-
-			//temp.getTotalScore += student[i];
-
+			System.out.printf("ÃÑÇÕÁ¡¼ö: %d, Æò±ÕÁ¡¼ö: %d\n", value.getTotalScore(), value.getTotalAverage());
 		} // end for
-		System.out.printf("ÃÑÇÕÁ¡¼ö: %d, Æò±ÕÁ¡¼ö: %d\n", temp.getTotalScore(), temp.getTotalAverage());
 
 		System.out.println("---------------------------");
 
@@ -40,10 +37,16 @@ public class UseHomeAssignment12 {
 
 		System.out.println("---------------------------------------");
 
-		if (temp.getName().startsWith("±è")) {
-			System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÇÐ»ýµéÀÇ ÀÚ¹ÙÁ¡¼öÀÇ ÇÕ: " + temp.getJavaScore() + ", Æò±Õ: " + temp.getJavaScore() / 4);
-
-		} // end if
+		int javaSumKim = 0;
+		int cnt = 0;
+		for(HomeAssignment12 value : student) {
+			
+			if (value.getName().startsWith("±è")) {
+				javaSumKim += value.getJavaScore();
+				cnt++;
+			} // end if
+		}//end for
+		System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÇÐ»ýµéÀÇ ÀÚ¹ÙÁ¡¼öÀÇ ÇÕ: " + javaSumKim + ", Æò±Õ: " + javaSumKim/cnt);
 
 	}// main
 

@@ -41,15 +41,15 @@ public class Operator5{
 		
 		i=20;
 		int j=15;
-		System.out.println(i+"&"+j+"="+(i&j));
+		System.out.println(i+"&"+j+"="+(i&j));//&:상위비트와 하위비트 모두 1일 때 1내림
 
 		i=40;
 		j=12;
-		System.out.println(i+"|"+j+"="+(i|j));
+		System.out.println(i+"|"+j+"="+(i|j));//|:상위비트와 하위비트 모두 0일 때 0내림
 
 		i=45;
 		j=15;
-		System.out.println(i+"^"+j+"="+(i^j));
+		System.out.println(i+"^"+j+"="+(i^j));//^:상위비트와 하위비트 둘 중 하나만 1일 때 1내림
 
 
 	}//main

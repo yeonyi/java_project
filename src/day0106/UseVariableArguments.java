@@ -33,6 +33,7 @@ public class UseVariableArguments {
 //		uva.useVA();
 //		uva.useVA(1);
 		uva.useVA(1,2,43,5,100,6000); //동일한 데이터 형으로 여러개의 값을 넣을 수 있다.
+		System.out.println();
 		System.out.println("--------------------------------------");
 		uva.useVA2(1,  1,2,3,4);
 //		uva.useVA2(); error : int형은 반드시 값이 입력되어야 한다. V.A는 생략가능

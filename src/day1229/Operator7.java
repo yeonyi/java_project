@@ -16,7 +16,8 @@ public class Operator7 {
 		i-=4;//i=i-4=8
 		i*=3;//i=i*3=24
 		i/=5;//i=i/5=4
-		i%=3;//i=i%3=0
+		i%=3;//i=i%3=1
+		System.out.println(i);//1
 
 		//쉬프트대입
 		i<<=4;//i=i<<4

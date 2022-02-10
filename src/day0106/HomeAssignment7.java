@@ -19,14 +19,14 @@ public class HomeAssignment7 {
 		return i;
 	}//name
 	
-	//2번문제 - 가변값
+	//2번문제 - 고정값
 	public int score() { 
 		int s;
 		s=80;
 		return s;
 	}//score
 	
-	//3번문제 - 가변값
+	//3번문제 - 고정값
 	public int anotherScore() {
 		int s2;
 		s2=80;

@@ -21,7 +21,7 @@ public class UseStaticImport {
 //		String bs = String.valueOf(b);
 //		String is = String.valueOf(i);
 //		String ds = String.valueOf(d);
-		String bs = valueOf(b);
+		String bs = valueOf(b);//int를 String으로 변환
 		String is = valueOf(i);
 		String ds = valueOf(d);
 		System.out.println(bs+"/"+is+"/"+ds);

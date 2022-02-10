@@ -11,7 +11,7 @@ public class TestOverload {
 	 * 별을 하나 출력하는 일
 	 */
 	public void printStar() {
-		System.out.print("★");
+		System.out.println("★");
 	}// printStar
 
 	/**

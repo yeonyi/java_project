@@ -37,9 +37,4 @@ public class HomeAssignment6 {
 
 	}// main
 
-//	private void i(int i) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-
 }// class

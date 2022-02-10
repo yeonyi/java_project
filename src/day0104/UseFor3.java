@@ -13,7 +13,7 @@ public class UseFor3 {
 //			System.out.println("무한루프");
 //			break;//가장 가까운 반복문의 실행을 멈춤 -> 무한루프가 될 수 없게 함
 //		} // end for
-//		//System.out.println("안녕"); 무한루프 아랫줄에 있으면 실행할 수 없음
+//		System.out.println("안녕"); //무한루프 아랫줄에 있으면 실행할 수 없음
 
 		// 증가하는 수를 세는 무한 루프
 		for (int i = 0;; i++) {
