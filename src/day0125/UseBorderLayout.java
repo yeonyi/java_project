@@ -29,8 +29,9 @@ public class UseBorderLayout extends JFrame {
 //		setLayout(new BorderLayout()); //기본적으로 설정되어있음
 		//문자열 상수
 		add("North", jlblNorth);
-		add("South", jbtnSouth);
+//		add("South", jbtnSouth);
 		//BorderLayout Constant
+		add(BorderLayout.SOUTH,jbtnSouth);
 		add(BorderLayout.CENTER,jtaCenter);
 		add(BorderLayout.WEST,jlblWest);
 		add(BorderLayout.EAST,jbtnEast);

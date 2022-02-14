@@ -94,6 +94,8 @@ public class HomeAssignment_0126 extends JFrame {
 		jp1.setBounds(70, 130, 50, 50);
 		jp2.setBounds(130, 130, 50, 50);
 		
+		jta.setLineWrap(true);//자동줄바꿈
+		
 		//Border설정
 		jta.setBorder(new TitledBorder("데이터"));
 		

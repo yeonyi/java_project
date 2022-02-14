@@ -17,8 +17,6 @@ public class MemoPad extends JFrame {
 	public MemoPad() {
 		super("메모장");
 		
-		//TextArea 스크롤
-		JScrollPane jsp =new JScrollPane(writeField);
 		
 		//메뉴바 생성
 		JMenuBar jmb = new JMenuBar();
@@ -37,6 +35,8 @@ public class MemoPad extends JFrame {
 		jmiMemoInfo = new JMenuItem("메모장 정보");
 		
 		writeField = new JTextArea();
+		//TextArea 스크롤
+		JScrollPane jsp =new JScrollPane(writeField);
 		
 		//메뉴아이템을 메뉴바에 배치
 		jm1.add(jmiNew);

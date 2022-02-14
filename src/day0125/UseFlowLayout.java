@@ -18,7 +18,7 @@ public class UseFlowLayout extends JFrame {
 		//2.컴포넌트 생성
 		JLabel jlblName = new JLabel("이름");
 		JTextField jtfName = new JTextField(10); //크기를 10으로 설정
-		JCheckBox jcbSaveFlag = new JCheckBox("저장", true);
+		JCheckBox jcbSaveFlag = new JCheckBox("저장", false);
 		JButton jbtnAdd = new JButton("입력");
 		
 		//3.컴포넌트 배치

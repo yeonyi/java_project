@@ -6,6 +6,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JScrollPane;
 
 @SuppressWarnings("serial")
 //1.윈도우 컴포넌트 상속
@@ -21,7 +22,7 @@ public class UseManualLayout extends JFrame {
 		jcb.addItem("오라클");
 		jcb.addItem("콤보박스");
 		
-		String[] data = "전민정, 정인선, 장정우, 김진영, 김현우".split(",");
+		String[] data = "전민정,정인선,장정우,김진영,김현우".split(",");
 		JList<String> jl = new JList<String>(data);
 		
 		//색변경
@@ -50,7 +51,6 @@ public class UseManualLayout extends JFrame {
 		add(jlbl);
 		add(jcb);
 		add(jl);
-		
 		//4.윈도우 크기 설정
 		setSize(500, 400);
 		

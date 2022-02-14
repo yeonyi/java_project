@@ -1,5 +1,6 @@
 package day0127;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,13 +23,14 @@ public class TestEvent extends JFrame implements ActionListener{
 		//5.배치
 		JPanel jp = new JPanel();
 		jp.add(jbtn); //버튼이 고유 크기를 가지고 패널에 배치
-		add("Center",jp);
+//		add("Center",jp);
+		add(BorderLayout.CENTER,jp);
 		//6.윈도우 크기 설정, 가시화
 		setSize(300, 300);
 		setVisible(true);
+		
 		//7.종료 처리
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		
 	}//TestEvent
 

@@ -27,7 +27,7 @@ public class FontDialog extends JDialog {
 	 
 	
 	public FontDialog(MemoPad mp) {
-		super(mp, "글꼴", true);
+		super(mp, "글꼴", true);//modal
 		
 		//라벨
 		JLabel jlbl=new JLabel("글꼴 (F):");

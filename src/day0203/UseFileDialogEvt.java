@@ -62,9 +62,9 @@ public class UseFileDialogEvt extends WindowAdapter implements ActionListener {
 	}//saveFileDialog
 	
 	private void useInputDialog() {
-//		String inputMsg = JOptionPane.showInputDialog("이름 입력해주세요");
-		String inputMsg = JOptionPane.showInputDialog(ufdv,"이름 입력해주세요",
-				"너이름이 뭐니?",JOptionPane.QUESTION_MESSAGE);
+		String inputMsg = JOptionPane.showInputDialog("이름 입력해주세요");
+//		String inputMsg = JOptionPane.showInputDialog(ufdv,"이름 입력해주세요",
+//				"너이름이 뭐니?",JOptionPane.QUESTION_MESSAGE);
 		ufdv.setTitle("이름 : "+inputMsg);
 	}//useInputDialog
 	

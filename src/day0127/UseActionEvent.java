@@ -67,15 +67,17 @@ public class UseActionEvent extends JFrame implements ActionListener{
 		String source = "";
 		if(ae.getSource()==jbtnAdd);{
 			source = "버튼";
+			System.out.println("버튼이 눌렸음");
 		}
 		if(ae.getSource()==jtfName);{
 			source = "텍스트 필드";
+//			System.out.println("텍스트필드임");
 		}
 		
 		
 		
 		String txt = jtfName.getText(); //인스턴스 변수
-		//JTextArea에 넣는다
+		//JTextArea에 넣는다 
 //		jtaName.Disp.setText(txt);//기존 값을 지우고 새로 설정
 		jtaNameDisp.append(source+":"+txt);//기존 값 뒤에 추가
 		jtaNameDisp.append("\n");//줄바꿈

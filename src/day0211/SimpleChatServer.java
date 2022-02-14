@@ -1,4 +1,4 @@
-package day0210;
+package day0211;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,8 +16,12 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+/**
+ * Thread가 도입되어 읽기와 쓰기를 동시에 처리한다.
+ * @author user
+ */
 @SuppressWarnings("serial")
-public class SimpleChatServer extends JFrame implements ActionListener {
+public class SimpleChatServer extends JFrame implements ActionListener, Runnable {
 	
 	private JTextArea jtaTalkDisplay;
 	private JTextField jtfTalk;
@@ -35,7 +39,7 @@ public class SimpleChatServer extends JFrame implements ActionListener {
 		jspJtaTalkDisplay=new JScrollPane( jtaTalkDisplay );
 		jtfTalk=new JTextField();
 		
-		jtaTalkDisplay.setEditable(false);//편집을 불가능하게 설정
+		jtaTalkDisplay.setEditable(false);
 
 		jspJtaTalkDisplay.setBorder(new TitledBorder("대화내용"));
 		jtfTalk.setBorder(new TitledBorder("대화"));
@@ -88,7 +92,10 @@ public class SimpleChatServer extends JFrame implements ActionListener {
 			disReadStream = new DataInputStream(client.getInputStream());
 			dosWriteStream = new DataOutputStream(client.getOutputStream());
 			jtaTalkDisplay.append("즐거운 채팅되세요.\n");
-			readMsg();//메시지를 읽어들이는 method
+//			readMsg();//메시지를 읽어들이는 method를 호출하지 않아어요
+			//Thread를 생성하여 동시에 동작해야할 코드를 실행시킨다.
+			Thread thread = new Thread(this);
+			thread.start();//start() => run이 호출된다.
 		}//end if
 	}//openServer
 	
@@ -100,7 +107,9 @@ public class SimpleChatServer extends JFrame implements ActionListener {
 	/**
 	 * 접속자가 보내오는 메시지를 무한루프로 읽어들여 jta에 출력
 	 */
-	public void readMsg() {
+//	public void readMsg() {
+	@Override
+	public void run() {
 		try {
 			while(true) {
 				jtaTalkDisplay.append(disReadStream.readUTF()+"\n");
@@ -114,10 +123,10 @@ public class SimpleChatServer extends JFrame implements ActionListener {
 	
 	public void sendMsg() throws IOException {
 		String msg = jtfTalk.getText();
-		dosWriteStream.writeUTF("케로로 : "+msg); //접속자에게 메시지를 보내고
+		dosWriteStream.writeUTF("최연이 서버 : "+msg); //접속자에게 메시지를 보내고
 		dosWriteStream.flush();
 		
-		jtaTalkDisplay.append("케로로 : " +msg+"\n");//내 대화창에도 메시지를 올리고
+		jtaTalkDisplay.append("최연이 서버 : " +msg+"\n");//내 대화창에도 메시지를 올리고
 		jtfTalk.setText("");//대화입력창을 초기화 한다.
 		setScrollbar();
 	}//sendMsg
